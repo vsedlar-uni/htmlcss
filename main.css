@@ -13,6 +13,7 @@
 }
 
 body {
+  height: 100vh;
   font-family: poppins, sans-serif;
   line-height: 1.6;
   color: var(--primary-color);
@@ -97,6 +98,7 @@ a:hover {
 }
 
 /* Utility Classes */
+
 .float-left {
   float: left;
 }
@@ -159,6 +161,14 @@ a:hover {
   font-weight: 600;
 }
 
+.m-20 {
+  margin: 20px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
 /* Semantic classes */
 .box {
   /* margin: 20px; */
@@ -198,6 +208,7 @@ a:hover {
   color: #1f1f1f;
   font-size: 14px;
 }
+
 /* HomePage */
 
 #main-section {
@@ -259,7 +270,69 @@ a:hover {
   background: #ff7a00;
 }
 
-/* ------------------------------------------------------ /*
+/* Login */
+
+.login-container {
+  margin: auto;
+  background: #ffffff;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  /* border-radius: 8px; */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.login-container h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #1e3a8a;
+}
+
+.login-container p {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1e40af;
+}
+
+/* ---------Responsive--------------- /*
 
 /* Large screen (lg): 992-1199px */
 @media (max-width: 1199px) {

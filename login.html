@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RentAPet</title>
+    <link rel="icon" type="image/x-icon" href="resources/favicon-32x32.png">
+
+    <meta name="description" content="Rent a pet Website." />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
+  </head>
+  <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <section class="m-20 p-20">
+            <div class="login-container">
+                <p>Login to your account</p>
+                <form action="/login" method="post">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <button type="submit">Login</button>
+                </form>
+                <div>
+                    <p>
+                        <a href="wip.html">Forgot password?</a>
+                    </p>
+                    <p>
+                        Don’t have an account?
+                        <a href="signup.html">Sign Up</a>
+                    </p>        
+                </div>
+            </div>
+        </section>
+    </main>
+    <hr />
+    <footer>
+      <section>
+        <div>
+          <p>&copy; 2024 PetPal. All rights reserved.</p>
+        </div>
+        <div class="footer-center">
+          <p>Get in touch with us:</p>
+          <p>
+            Contact Us:
+            <a href="mailto:info@rentapet.com">info@rentapet.com</a>
+          </p>
+          <p>Phone: 123-456-7890</p>
+          <p>Address: 123 Main St, Anytown, USA 12345</p>
+        </div>
+        <div class="footer-right">
+          <ul>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+      </section>
+      <div class="footer-social-media">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+      </div>
+    </footer>
+    <script src="main.js" defer></script>
+  </body>
+</html>
