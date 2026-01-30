@@ -258,3 +258,39 @@ a:hover {
 .hero-btn:hover {
   background: #ff7a00;
 }
+
+/* ------------------------------------------------------ /*
+
+/* Large screen (lg): 992-1199px */
+@media (max-width: 1199px) {
+  /* Styles for large screens */
+  .lg-gap-small {
+    gap: 15px;
+  }
+}
+
+/* Mobile breakpoint (max width: 768px) */
+@media (max-width: 767.98px) {
+  /* styles for mobile devices */
+  .tile {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .mobile-flex-column {
+    flex-direction: column;
+  }
+
+  .mobile-padding-container-small {
+    padding: 20px;
+  }
+
+  .mobile-gap-small {
+    gap: 20px;
+  }
+
+  section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
