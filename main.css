@@ -13,7 +13,6 @@
 }
 
 body {
-  height: 100vh;
   font-family: poppins, sans-serif;
   line-height: 1.6;
   color: var(--primary-color);
@@ -115,6 +114,10 @@ a:hover {
   display: flex;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .flex-center {
   justify-content: center;
 }
@@ -161,6 +164,14 @@ a:hover {
   font-weight: 600;
 }
 
+.w-half {
+  width: 50%;
+}
+
+.button.w-half {
+  width: 50%;
+}
+
 .m-t-10 {
   margin-top: 10px;
 }
@@ -171,6 +182,14 @@ a:hover {
 
 .p-20 {
   padding: 20px;
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.ta-left {
+  text-align: left;
 }
 
 /* Semantic classes */
@@ -211,6 +230,28 @@ a:hover {
 .tile article {
   color: #1f1f1f;
   font-size: 14px;
+}
+
+.card {
+  max-width: 250px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card article {
+  font-size: 12px;
+}
+
+.card button {
+  border-radius: 0;
+}
+
+.card .button {
+  border-radius: 0;
 }
 
 /* HomePage */
@@ -324,15 +365,13 @@ input {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
-}
-
-input[type="email"]:focus,
-input[type="password"]:focus {
   outline: none;
   border-color: #2563eb;
 }
 
+.button,
 button {
+  display: inline-block;
   width: 100%;
   padding: 12px;
   margin-top: 5px;
