@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login | RentAPet</title>
-    <link rel="icon" type="image/x-icon" href="resources/favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" href="resources/favicon-32x32.png" />
 
     <meta name="description" content="Rent a pet Website." />
     <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link
       rel="stylesheet"
       type="text/css"
@@ -18,42 +21,48 @@
   </head>
   <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="browse.html">Browse</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="browse.html">Browse</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </nav>
     </header>
-    <hr>
+    <hr />
     <main>
-        <section class="m-20 p-20">
-            <div class="login-container">
-                <p>Login to your account</p>
-                <form id="loginForm" action="/login" method="POST" novalidate>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required autocomplete="true">
-                    <div class="error" id="emailError"></div>
+      <section class="m-20 p-20">
+        <div class="login-container">
+          <p>Login to your account</p>
+          <form id="loginForm" action="/login" method="POST" novalidate>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              autocomplete="true"
+            />
+            <div class="error" id="emailError"></div>
 
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                    <div class="error" id="passwordError"></div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+            <div class="error" id="passwordError"></div>
 
-                    <button type="submit">Login</button>
-                </form>
-                <div>
-                    <p>
-                        <a href="wip.html">Forgot password?</a>
-                    </p>
-                    <p>
-                        Don’t have an account?
-                        <a href="signup.html">Sign Up</a>
-                    </p>        
-                </div>
-            </div>
-        </section>
+            <button type="submit">Login</button>
+          </form>
+          <div>
+            <p>
+              <a href="wip.html">Forgot password?</a>
+            </p>
+            <p>
+              Don’t have an account?
+              <a href="signup.html">Sign Up</a>
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
     <hr />
     <footer>
