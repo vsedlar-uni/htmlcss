@@ -272,6 +272,16 @@ a:hover {
   background: #ff7a00;
 }
 
+/* WIP page */
+.wip-container {
+  background: var(--secondary-color);
+}
+
+.wip-icon {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
 /* Forms and Inputs */
 
 .form-container {
@@ -382,13 +392,4 @@ button:hover {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-}
-
-.wip-container {
-  background: var(--secondary-color);
-}
-
-.wip-icon {
-  font-size: 4rem;
-  margin-bottom: 10px;
 }
