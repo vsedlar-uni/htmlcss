@@ -233,7 +233,7 @@ a:hover {
 }
 
 .card {
-  max-width: 250px;
+  max-width: 270px;
   border: 1px solid black;
   padding: 10px;
 }
@@ -244,6 +244,7 @@ a:hover {
 
 .card article {
   font-size: 12px;
+  min-height: 120px;
 }
 
 .card button {
