@@ -1,42 +1,46 @@
-const form = document.getElementById("loginForm");
+(function () {
+  const form = document.getElementById("loginForm");
 
-const emailInput = document.getElementById("email");
-const passwordInput = document.getElementById("password");
+  const emailInput = document.getElementById("email");
+  const passwordInput = document.getElementById("password");
 
-const emailError = document.getElementById("emailError");
-const passwordError = document.getElementById("passwordError");
+  const emailError = document.getElementById("emailError");
+  const passwordError = document.getElementById("passwordError");
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
+  const storedUser = JSON.parse(localStorage.getItem("user"));
 
-  let isValid = true;
-
-  emailError.textContent = "";
-  passwordError.textContent = "";
-
-  const emailValue = emailInput.value.trim();
-
-  if (emailValue === "") {
-    emailError.textContent = "Email is required.";
-    isValid = false;
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
-    emailError.textContent = "Please enter a valid email address.";
-    isValid = false;
+  if (!storedUser) {
+    return;
   }
 
-  const passwordValue = passwordInput.value.trim();
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  if (passwordValue === "") {
-    passwordError.textContent = "Password is required.";
-    isValid = false;
-  }
+    let isValid = true;
 
-  if (isValid) {
-    // TODO: store information in localstorage
-    // add redirect to home page
-    alert("You are logged in.");
-    window.location.href = "index.html";
-    // form.submit()
-  }
-});
+    emailError.textContent = "";
+    passwordError.textContent = "";
 
+    const emailValue = emailInput.value.trim();
+
+    if (emailValue !== storedUser.email) {
+      emailError.textContent = "Invalid email";
+      isValid = false;
+    }
+
+    const passwordValue = passwordInput.value.trim();
+
+    if (passwordValue !== storedUser.password) {
+      passwordError.textContent = "Invalid password";
+      isValid = false;
+    }
+
+    if (isValid) {
+      alert("You are logged in.");
+
+      localStorage.setItem("logged_in_user", JSON.stringify(storedUser));
+      window.location.href = "index.html";
+      // form.submit()
+    }
+  });
+})();
