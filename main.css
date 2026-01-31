@@ -161,6 +161,10 @@ a:hover {
   font-weight: 600;
 }
 
+.m-t-10 {
+  margin-top: 10px;
+}
+
 .m-20 {
   margin: 20px;
 }
@@ -304,11 +308,9 @@ label {
   font-weight: bold;
 }
 
-input[type="email"],
-input[type="password"] {
+input {
   width: 100%;
   padding: 12px;
-  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
