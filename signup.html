@@ -124,13 +124,11 @@
         passwordError.textContent = "";
         confirmPasswordError.textContent = "";
 
-        // Name validation
         if (nameInput.value.trim() === "") {
           nameError.textContent = "Full name is required.";
           isValid = false;
         }
 
-        // Email validation
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (emailInput.value.trim() === "") {
           emailError.textContent = "Email is required.";
@@ -140,7 +138,6 @@
           isValid = false;
         }
 
-        // Password validation
         if (passwordInput.value === "") {
           passwordError.textContent = "Password is required.";
           isValid = false;
@@ -149,7 +146,6 @@
           isValid = false;
         }
 
-        // Confirm password validation
         if (confirmPasswordInput.value === "") {
           confirmPasswordError.textContent = "Please confirm your password.";
           isValid = false;
@@ -158,9 +154,10 @@
           isValid = false;
         }
 
-        // Submit if valid
         if (isValid) {
-          form.submit(); // replace with fetch/AJAX later if needed
+          alert("You have signed up.");
+          window.location.href = "index.html";
+          //form.submit();
         }
       });
     </script>
