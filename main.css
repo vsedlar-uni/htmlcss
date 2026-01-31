@@ -220,8 +220,6 @@ a:hover {
   background-color: #7ec9e0;
 }
 
-/* AI CSS - banner image */
-
 .hero-banner {
   position: relative;
   height: 420px;
@@ -350,7 +348,16 @@ button:hover {
 
 /* Mobile breakpoint (max width: 768px) */
 @media (max-width: 767.98px) {
-  /* styles for mobile devices */
+  .hero-banner {
+    max-height: none;
+    height: auto;
+  }
+
+  .hero-image {
+    object-fit: contain;
+    vertical-align: bottom;
+  }
+
   .tile {
     max-width: 1000px;
     margin: auto;
