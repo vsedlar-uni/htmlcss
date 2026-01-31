@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RentAPet</title>
+    <link rel="icon" type="image/x-icon" href="resources/favicon-32x32.png" />
+
+    <meta name="description" content="Rent a pet Website." />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="browse.html">Browse</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    <main>
+      <section>
+        <div class="login-container">
+          <p>Create your account</p>
+
+          <form id="signupForm" novalidate>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" />
+            <div class="error" id="nameError"></div>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+            <div class="error" id="emailError"></div>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" />
+            <div class="error" id="passwordError"></div>
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+            />
+            <div class="error" id="confirmPasswordError"></div>
+
+            <button type="submit">Sign Up</button>
+          </form>
+          <div class="m-t-10">
+            <p>
+              Already have an account?
+              <a href="login.html">Login</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <hr />
+    <footer>
+      <section>
+        <div class="footer-left">
+          <p>&copy; 2024 PetPal. All rights reserved.</p>
+        </div>
+        <div class="footer-center">
+          <p>Get in touch with us:</p>
+          <p>
+            Contact Us:
+            <a href="mailto:info@rentapet.com">info@rentapet.com</a>
+          </p>
+          <p>Phone: 123-456-7890</p>
+          <p>Address: 123 Main St, Anytown, USA 12345</p>
+        </div>
+        <div class="footer-right">
+          <ul>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+      </section>
+      <div class="footer-social-media">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+      </div>
+    </footer>
+    <script src="main.js" defer></script>
+    <script>
+      const form = document.getElementById("signupForm");
+
+      const nameInput = document.getElementById("name");
+      const emailInput = document.getElementById("email");
+      const passwordInput = document.getElementById("password");
+      const confirmPasswordInput = document.getElementById("confirmPassword");
+
+      const nameError = document.getElementById("nameError");
+      const emailError = document.getElementById("emailError");
+      const passwordError = document.getElementById("passwordError");
+      const confirmPasswordError = document.getElementById(
+        "confirmPasswordError",
+      );
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let isValid = true;
+
+        // Reset errors
+        nameError.textContent = "";
+        emailError.textContent = "";
+        passwordError.textContent = "";
+        confirmPasswordError.textContent = "";
+
+        // Name validation
+        if (nameInput.value.trim() === "") {
+          nameError.textContent = "Full name is required.";
+          isValid = false;
+        }
+
+        // Email validation
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailInput.value.trim() === "") {
+          emailError.textContent = "Email is required.";
+          isValid = false;
+        } else if (!emailPattern.test(emailInput.value.trim())) {
+          emailError.textContent = "Please enter a valid email address.";
+          isValid = false;
+        }
+
+        // Password validation
+        if (passwordInput.value === "") {
+          passwordError.textContent = "Password is required.";
+          isValid = false;
+        } else if (passwordInput.value.length < 6) {
+          passwordError.textContent = "Password must be at least 6 characters.";
+          isValid = false;
+        }
+
+        // Confirm password validation
+        if (confirmPasswordInput.value === "") {
+          confirmPasswordError.textContent = "Please confirm your password.";
+          isValid = false;
+        } else if (confirmPasswordInput.value !== passwordInput.value) {
+          confirmPasswordError.textContent = "Passwords do not match.";
+          isValid = false;
+        }
+
+        // Submit if valid
+        if (isValid) {
+          form.submit(); // replace with fetch/AJAX later if needed
+        }
+      });
+    </script>
+  </body>
+</html>
