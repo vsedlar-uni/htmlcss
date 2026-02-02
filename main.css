@@ -433,3 +433,7 @@ button:hover {
     padding-bottom: 20px;
   }
 }
+
+a.current {
+  font-weight: 600;
+}
