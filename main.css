@@ -416,6 +416,11 @@ button:hover {
     margin: auto;
   }
 
+  .box {
+    margin: auto;
+    max-width: none;
+  }
+
   .mobile-flex-column {
     flex-direction: column;
   }
