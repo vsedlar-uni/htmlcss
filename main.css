@@ -401,6 +401,10 @@ button:hover {
 
 /* Mobile breakpoint (max width: 768px) */
 @media (max-width: 767.98px) {
+  footer {
+    font-size: small;
+  }
+
   .hero-banner {
     max-height: none;
     height: auto;
